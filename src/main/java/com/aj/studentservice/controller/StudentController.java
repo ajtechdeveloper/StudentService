@@ -30,6 +30,7 @@ public class StudentController {
 
     @RequestMapping(value = "students", method = RequestMethod.GET)
     public ResponseEntity<List<Student>> getStudents() {
+        logger.info("In StudentController.getStudents(), using port 8081, fetching list of students");
         List<Student> students = new ArrayList<>();
         students.add(new Student("P001", "Jane", "Physics"));
         students.add(new Student("C001", "Jim", "Chemistry"));
